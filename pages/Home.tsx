@@ -11,13 +11,12 @@ const Home: React.FC<{ data: PortfolioData }> = ({ data }) => {
       <aside className="md:w-[380px] shrink-0 mb-10 md:mb-0">
         <div className="bg-white dark:bg-zinc-900 rounded-[2.5rem] shadow-2xl overflow-hidden w3-card-4 border border-zinc-100 dark:border-zinc-800">
           <div className="relative group overflow-hidden">
-<img 
-  src="/img/Foto.jpeg"
-  alt={profile.name}
-  className="w-full object-cover aspect-[4/5] profile-img transition-all duration-1000 group-hover:scale-110"
-/>
-
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-100"></div>
+          <img 
+            src={profile.photoUrl} 
+            alt={profile.name} 
+            className="w-full object-cover aspect-[4/5] profile-img transition-all duration-1000 group-hover:scale-110"
+          />
+           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-100"></div>
             <div className="absolute bottom-0 left-0 w-full p-8">
                <h2 className="text-white font-black text-2xl uppercase tracking-tighter leading-tight">{profile.name}</h2>
                <p className="text-xs font-black mt-2 uppercase tracking-[0.2em] text-accent">{profile.title}</p>
