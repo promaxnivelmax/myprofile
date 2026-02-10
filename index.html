@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="es" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ivan Gerardo Rodriguez - CV & Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+        
+        :root {
+            --accent: #FF8C00; /* Naranja para modo luz */
+            --bg-card: #ffffff;
+            --text-main: #09090b;
+            --shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .dark {
+            --accent: #D4AF37; /* Dorado para modo oscuro */
+            --bg-card: #18181b;
+            --text-main: #fafafa;
+            --shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+
+        .text-accent { color: var(--accent); }
+        .bg-accent { background-color: var(--accent); }
+        .border-accent { border-color: var(--accent); }
+
+        @keyframes shine {
+            0% { transform: translateX(-100%) rotate(45deg); }
+            100% { transform: translateX(200%) rotate(45deg); }
+        }
+
+        @keyframes gold-pulse {
+            0%, 100% { box-shadow: 0 0 15px var(--accent); opacity: 0.8; }
+            50% { box-shadow: 0 0 35px var(--accent); opacity: 1; }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .gold-glow {
+            animation: gold-pulse 2s infinite ease-in-out;
+        }
+
+        .shiny-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .shiny-card::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            animation: shine 3s infinite;
+        }
+
+        .floating-icon {
+            animation: float 4s infinite ease-in-out;
+        }
+
+        .w3-card-4 {
+            background-color: var(--bg-card);
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .w3-card-4:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .profile-img {
+            object-position: top center;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.13.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 selection:bg-orange-500 selection:text-white">
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
