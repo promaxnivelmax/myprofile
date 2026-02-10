@@ -109,8 +109,8 @@ const Home: React.FC<{ data: PortfolioData }> = ({ data }) => {
           </div>
         </section>
 
-        {/* Canal Informativo - DISEÑO EXPLOSIVO */}
-        <section className="bg-zinc-950 text-white p-16 rounded-[3rem] shadow-2xl relative overflow-hidden group border-4 border-accent gold-glow shiny-card">
+        {/* Canal Informativo - RESPONSIVO A TEMAS */}
+        <section className="bg-zinc-950 dark:bg-black text-white p-16 rounded-[3rem] shadow-2xl relative overflow-hidden group border-4 border-accent gold-glow shiny-card">
           <div className="absolute top-0 right-0 p-8 opacity-15 transform scale-150 group-hover:scale-175 transition-transform duration-1000 rotate-12 floating-icon">
              <i className="fas fa-bullhorn text-[15rem] text-accent"></i>
           </div>
